@@ -12966,6 +12966,21 @@ For more information about libfribidi, check:
 For more information about libharfbuzz, check:
 @url{https://github.com/harfbuzz/harfbuzz}.
 
+@section dummysync
+
+This filter takes in input two input videos, the first input is considered
+the "main" source and is passed unchanged to the output.
+
+@subsection Examples
+@itemize
+@item
+Read ahead cropdetect metadata with [dummy] pts set 1sec in advance over [main]
+and sync without touching the "main" source.
+@example
+[in]split[main][dummy];[dummy]setpts=PTS-1/TB,cropdetect[dummy];
+[main][dummy]dummysync[out]
+@end example
+
 @section edgedetect
 
 Detect and draw edges. The filter uses the Canny Edge Detection algorithm.

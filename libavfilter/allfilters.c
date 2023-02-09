@@ -267,6 +267,7 @@ extern const AVFilter ff_vf_drawbox;
 extern const AVFilter ff_vf_drawgraph;
 extern const AVFilter ff_vf_drawgrid;
 extern const AVFilter ff_vf_drawtext;
+extern const AVFilter ff_vf_dummysync;
 extern const AVFilter ff_vf_edgedetect;
 extern const AVFilter ff_vf_elbg;
 extern const AVFilter ff_vf_entropy;
